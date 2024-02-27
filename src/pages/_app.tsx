@@ -1,10 +1,19 @@
-import Link from "next/link";
 import "../styles/global.css";
-export default function Detail() {
+import Header from "@/pages/components/header";
+import { useHeaderStore } from "@/store/useHeader";
+import Info from "@/pages/components/info";
+import Why from "@/pages/components/why";
+
+export default function App() {
+  const { headerType } = useHeaderStore();
+
   return (
-      <div>
-        aaaaa
-          <Link href={'/dir'}>aaa</Link>
+    <div className="app">
+      <div className="content">
+        <Header />
+        {headerType === "info" && <Info />}
+        {headerType === "why" && <Why />}
       </div>
+    </div>
   );
 }
