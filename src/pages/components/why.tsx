@@ -1,29 +1,55 @@
+import Image from "next/image";
+
 export default function Why() {
   return (
     <div className="wrap">
       <div className="box">
-        <h2>React 상태관리</h2>
+        <h2>상태관리</h2>
 
-        <h3>상태란?</h3>
-        <p>
-          컴포넌트 내부에서 관리되며 어플리케이션의 렌더에 영향을 미치는 플레인
-          자바스크립트 객체이다. 변화하는 데이터 라고도 한다.
-        </p>
+        {/*<h3>상태의 정의</h3>*/}
+        {/*<p>컴포넌트의 변경 가능한 데이터 저장소</p>*/}
 
-        <h3>상태의 종류</h3>
+        {/*<h3>상태의 종류</h3>*/}
+        {/*<ul>*/}
+        {/*  <li>*/}
+        {/*    <strong>지역상태</strong> : 특정 컴포넌트 안에서만 관리되는 상태를*/}
+        {/*    뜻한다. 다른 컴포넌트들과 데이터를 공유하지 않는다.*/}
+        {/*  </li>*/}
+        {/*  <li>*/}
+        {/*    <strong>전역 상태</strong> : 프로젝트 전체에 영향을 끼치는 상태이다.*/}
+        {/*  </li>*/}
+        {/*</ul>*/}
+
+        <h3>상태관리가 필요해진 이유</h3>
         <ul>
           <li>
-            <strong>지역상태</strong> : 특정 컴포넌트 안에서만 관리되는 상태를
-            뜻한다. 다른 컴포넌트들과 데이터를 공유하지 않는다.
+            <strong>컴포넌트간 공유</strong>
+            <br />
+            여러 컴포넌트에서{" "}
+            <span className="underline">공통적으로 사용되는 상태</span>를 관리
+            할때.
+            <br />
+            ex) 사용자 인증 정보, 로그인 상태, 언어, 테마, 설정 등
+            애플리케이션의 여러 곳에서 공유해야하는 데이터가 있을 때입니다.
           </li>
           <li>
-            <strong>전역 상태</strong> : 프로젝트 전체에 영향을 끼치는 상태이다.
+            <strong>상태의 일관성</strong>
+            <br />
+            리액트는 <span className="underline">단방향 데이터 흐름</span>을
+            가지고 있으며 그 방향은 <span className="underline">하향식</span>
+            으로 고정되어 있습니다. 중첩된 컴포넌트가 많은 경우 상태를 상위로
+            전달하는 것이 번거로울 수 있습니다. 전역 상태 관리를 통해서 여러
+            컴포넌트에서 동일한 상태에 접근하고 업데이트할 수 있으며 이를 통해
+            상태의 일관성을 유지할 수 있습니다.
           </li>
         </ul>
       </div>
 
       <div className="box">
-        <h2>React에서의 상태 관리 툴</h2>
+        <h2>React에서의 다양한 상태관리 툴</h2>
+        <h3>Recoil</h3>
+
+        <ul></ul>
         <h3>Context API</h3>
         <p>
           <strong>Context API</strong>는{" "}
@@ -34,8 +60,6 @@ export default function Why() {
           만들어진 방법이다.
         </p>
         <p>
-          전역 상태관리 도구 라고 하기엔, Context API는 아무것도 관리하지
-          않는다. Context API는 종속성을 주입하기위한 도구일 뿐이다. <br />
           React에서의 실질적인 상태관리는 <strong>useState</strong>,
           <strong> useReducer</strong>를 통해 일어난다.
         </p>
@@ -90,7 +114,12 @@ export default function Why() {
 
         <h3>React Query</h3>
 
-        <img src="../public/npm-trand-01.png" alt=""></img>
+        {/*<Image*/}
+        {/*  src="/npm-trand-01.png"*/}
+        {/*  alt="Description"*/}
+        {/*  width={500}*/}
+        {/*  height={500}*/}
+        {/*/>*/}
       </div>
     </div>
   );
