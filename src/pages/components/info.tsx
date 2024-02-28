@@ -14,10 +14,8 @@ export default function Info() {
         <h3>Zustand 장점</h3>
         <ul>
           <li>
-            <strong>작고 가벼움</strong> <br /> Zustand는 큰 상태 관리
-            라이브러리의 중량감을 원하지 않는 작은 앱에 이상적인 선택이다. 이
-            라이브러리는 단지 1KB로, 성능에 부담을 주지 않으면서도 낮은 사이즈를
-            유지한다.
+            <strong>작고 가벼움</strong> <br /> Zustand 라이브러리는 단지 1KB로,
+            성능에 부담을 주지 않으면서도 낮은 사이즈를 유지한다.
           </li>
           <li>
             <strong>간단하고 직관적인 API</strong> <br /> Zustand의 API는 함수형
@@ -54,11 +52,12 @@ export default function Info() {
         <h3>Zustand 단점</h3>
         <ul>
           <li>
-            <strong>대규모 애플리케이션에는 덜 적합</strong> <br /> Zustand는
-            API가 간단하고 심플하여 작은 애플리케이션에서 훌륭하게 작동하지만,
+            <strong>대규모 애플리케이션에는 적합 하지 않음</strong> <br />{" "}
+            Zustand는 API가 간단하고 심플하여 소규모 애플리케이션에서 훌륭하게
+            작동하지만,
             <br />
-            규모가 큰 애플리케이션이 상태 관리에 대한 더 정교한 요구 사항을 갖는
-            경우에는 부적합할 수 있다.
+            애플리케이션이 상태 관리에 대한 더 정교한 요구 사항을 갖는 경우에는
+            부적합할 수 있다.
           </li>
           <li>
             <strong>학습 자료 부족</strong> <br /> Zustand는 다른 상태관리

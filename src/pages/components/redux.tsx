@@ -47,7 +47,8 @@ const mapDispatchToProps = (dispatch: (action: { type: string }) => void) => ({
   handleClick: () => dispatch(changeTheme()),
 });
 
-// mapStateToProps와 mapDispatchToProps는 ThemeProvider 컴포넌트를 Redux store과 연결하는 데 사용됩니다. mapStateToProps는 Redux store의 상태를 props로 매핑하고, mapDispatchToProps는 dispatch를 수행하는 함수를 props로 매핑합니다.
+// mapStateToProps와 mapDispatchToProps는 ThemeProvider 컴포넌트를 Redux store과 연결하는 데 사용됩니다.
+// mapStateToProps는 Redux store의 상태를 props로 매핑하고, mapDispatchToProps는 dispatch를 수행하는 함수를 props로 매핑합니다.
 const ConnectedThemeProvider = connect(
   mapStateToProps,
   mapDispatchToProps,
