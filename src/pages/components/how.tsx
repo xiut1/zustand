@@ -38,6 +38,8 @@ export default function How() {
           </span>
           을 유지하면서 마치 직접 객체를 변경하는 것처럼 코드를 작성할 수 있게
           하는 것으로. 코드의 가독성을 향상시키고 버그를 방지하는데 도움됨.
+          <br />
+          참고 파일 : useButtonChange.tsx
         </p>
 
         <h3>DevTools</h3>
@@ -51,6 +53,8 @@ export default function How() {
           </a>{" "}
           을 추가한 후 개발자 도구의 redux 패널에서 애플리케이션의 상태 변화를
           쉽게 확인하고 디버깅할 수 있습니다.
+          <br />
+          참고 파일 : useButtonChange.tsx
         </p>
 
         <h3>Persist</h3>
@@ -69,6 +73,13 @@ export default function How() {
           함수입니다. 이를 통해 컴포넌트간에 일관적이고 협업하는 상태를 생성하고
           관리할 수 있습니다. <br />
           참고 파일 : useCombine.tsx
+        </p>
+
+        <h3>Subscribe</h3>
+        <p>
+          상태 변경에 대한 반응으로 함수를 실행하기 위해 사용되는 메서드입니다.
+          <br />
+          참고 파일 : useButtonChange.tsx
         </p>
       </div>
     </div>

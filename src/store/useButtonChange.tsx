@@ -3,12 +3,12 @@ import { immer } from "zustand/middleware/immer";
 import { devtools, persist } from "zustand/middleware";
 
 // State 타입을 정의.
-type State = {
+type colors = {
   colors: string;
 };
 
 // Actions 상태를 관리할 함수의 타입을 정의.
-type Actions = {
+type colorChange = {
   colorChange: () => void;
 };
 
@@ -16,7 +16,8 @@ type Actions = {
 export const useColorChange = create(
   devtools(
     immer(
-      persist<State & Actions>(
+      // 타입 값으로 State 와 Action 지정해 놓은 부분을 설정해 줌
+      persist<colors & colorChange>(
         (set) => ({
           // state 의 기본값을 정의
           colors: "white",
@@ -36,3 +37,8 @@ export const useColorChange = create(
     ),
   ),
 );
+
+// subscribe 함수를 사용 하여 useColorChange 의 colors 값이 변경 될 경우 log 를 출력
+useColorChange.subscribe((colors) => {
+  console.log(colors);
+});

@@ -14,13 +14,14 @@ export default function Info() {
         <h3>Zustand 장점</h3>
         <ul>
           <li>
-            <strong>작고 가벼움</strong> <br /> Zustand는 약 1KB로 매우
-            가벼우며, 이는 성능에 압박을 주지 않는 동시에 크고 무거운 상태 관리
-            라이브러리를 사용하고 싶지 않은 작은 앱에 이상적이다.
+            <strong>작고 가벼움</strong> <br /> Zustand는 큰 상태 관리
+            라이브러리의 중량감을 원하지 않는 작은 앱에 이상적인 선택이다. 이
+            라이브러리는 단지 1KB로, 성능에 부담을 주지 않으면서도 낮은 사이즈를
+            유지한다.
           </li>
           <li>
             <strong>간단하고 직관적인 API</strong> <br /> Zustand의 API는 함수형
-            업데이트를 지원하고, 그것들이 훅에서 쉽게 사용될 수 있도록
+            업데이트를 지원하고, 그것들이 Hook에서 쉽게 사용될 수 있도록
             설계되었다.
           </li>
           <li>
