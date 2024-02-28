@@ -14,12 +14,12 @@ export default function Compare() {
         <Context />
       </div>
       <div className="box">
-        <h2>Redux</h2>
-        <Redux />
-      </div>
-      <div className="box">
         <h2>Recoil</h2>
         <Recoil />
+      </div>
+      <div className="box">
+        <h2>Redux</h2>
+        <Redux />
       </div>
       <div className="box">
         <h2>Zustand</h2>

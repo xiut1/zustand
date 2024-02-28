@@ -18,6 +18,7 @@ export default function ContextProvider() {
   return (
     // Context가 적용될 부분을 Provider로 지정해 준다.
     <ThemeContext.Provider value={theme}>
+      {/* Consumer > 제공받은 정녁 상태를 사용하는 역활 */}
       <button
         onClick={handleClick}
         style={{ backgroundColor: theme, width: "100px", height: "50px" }}
