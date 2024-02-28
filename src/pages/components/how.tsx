@@ -1,4 +1,9 @@
+import { useStore } from "@/store/useCombine";
+
 export default function How() {
+  const { cart, login } = useStore();
+  console.log(cart, login);
+
   return (
     <div className="wrap">
       <div className="box">

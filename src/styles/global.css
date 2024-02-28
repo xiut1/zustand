@@ -109,7 +109,7 @@ a {
 
 .app {
     word-break: keep-all;
-    background: url("../public/zustand.jpg") no-repeat center / cover;
+    background: url("/zustand.jpg") no-repeat center / cover;
 }
 
 .app .content {
@@ -146,6 +146,13 @@ h3 {
 p {
     margin-top: 20px;
     font-size: 22px;
+}
+
+img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 ul {
