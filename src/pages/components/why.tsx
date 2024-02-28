@@ -31,22 +31,6 @@ export default function Why() {
       <div className="box">
         <h2>React에서의 다양한 상태관리 툴</h2>
 
-        <h3>글로벌 사용량</h3>
-        <Image
-          src={"/npm-trand-01.png"}
-          alt={"npm-trand"}
-          width={2660}
-          height={1654}
-        />
-
-        <h3>최근 업데이트</h3>
-        <Image
-          src={"/npm-trand-02.png"}
-          alt={"npm-trand"}
-          width={2674}
-          height={792}
-        />
-
         <h3>Context API</h3>
         <p>
           <strong>Context API</strong>는{" "}
@@ -132,6 +116,23 @@ export default function Why() {
 
         <h3>React Query</h3>
         <p>조혜진_이모션님이 열심히 설명한 관계로 이하 생략</p>
+      </div>
+      <div className="box">
+        <h3>글로벌 사용량</h3>
+        <Image
+          src={"/npm-trand-01.png"}
+          alt={"npm-trand"}
+          width={2660}
+          height={1654}
+        />
+
+        <h3>최근 업데이트</h3>
+        <Image
+          src={"/npm-trand-02.png"}
+          alt={"npm-trand"}
+          width={2674}
+          height={792}
+        />
       </div>
     </div>
   );

@@ -62,6 +62,14 @@ export default function How() {
           <span className="underline">localStorage</span>를 사용하지만, 사용자가
           원하는 저장메커니즘으로 커스텀할 수 있습니다.
         </p>
+
+        <h3>Combine</h3>
+        <p>
+          Zustand의 combine은 상태를 결합하고, 재사용하게 해주는 유틸리티
+          함수입니다. 이를 통해 컴포넌트간에 일관적이고 협업하는 상태를 생성하고
+          관리할 수 있습니다. <br />
+          참고 파일 : useCombine.tsx
+        </p>
       </div>
     </div>
   );

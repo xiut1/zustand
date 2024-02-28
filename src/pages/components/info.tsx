@@ -5,9 +5,9 @@ export default function Info() {
         <h2>Zustand 란?</h2>
         <p>
           Zustand는 독일어로 &apos;<span className="underline">상태</span>&apos;
-          라는 뜻을 가진 JavaScript 라이브러리로, 전역 상태를 사용하기 위해
-          필요한 양방향 바인딩, 불필요한 렌더링 등의 복잡성을 줄이고자
-          만들어졌다.
+          라는 뜻을 가진 JavaScript 라이브러리로, <br />
+          전역 상태를 사용하기 위해 필요한 양방향 바인딩, 불필요한 렌더링 등의
+          복잡성을 줄이고자 만들어졌다.
           <br />
         </p>
 
@@ -16,7 +16,7 @@ export default function Info() {
           <li>
             <strong>작고 가벼움</strong> <br /> Zustand는 약 1KB로 매우
             가벼우며, 이는 성능에 압박을 주지 않는 동시에 크고 무거운 상태 관리
-            라이브러리를 사용하고 싶지 않은 작은 툴 앱에 이상적이다.
+            라이브러리를 사용하고 싶지 않은 작은 앱에 이상적이다.
           </li>
           <li>
             <strong>간단하고 직관적인 API</strong> <br /> Zustand의 API는 함수형
