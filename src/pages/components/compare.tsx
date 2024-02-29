@@ -29,7 +29,12 @@ export default function Compare() {
         />
       </div>
       <div className="box">
-        <h2>느낀점</h2>
+        <p>
+          자세한 비교 : <br />
+          <a href="https://docs.pmnd.rs/zustand/getting-started/comparison">
+            https://docs.pmnd.rs/zustand/getting-started/comparison
+          </a>
+        </p>
       </div>
     </div>
   );

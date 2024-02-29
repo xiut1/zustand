@@ -14,6 +14,20 @@ export default function Why() {
             다수의 컴포넌트에서 공용으로 사용되는 상태를 관리할 때 필요합니다.
             예를 들어 사용자 인증 정보, 로그인 상태, 언어 설정, 테마 등과 같이
             애플리케이션의 여러 부분에서 공유해야 하는 데이터를 관리합니다.
+            <div
+              style={{
+                backgroundColor: "#fff",
+                maxWidth: "500px",
+                margin: "20px auto 0",
+              }}
+            >
+              <Image
+                src={"/state.gif"}
+                alt={"state"}
+                width={700}
+                height={475}
+              />
+            </div>
           </li>
           <li>
             <strong className="underline">상태의 일관성</strong>
@@ -37,7 +51,9 @@ export default function Why() {
           <span className="underline">
             <strong>React</strong>
           </span>
-          에서 만든, React 전역 상태를 공유하게 해주는 도구이다.
+          에서 만든, React 전역 상태를 공유하게 해주는 도구이다. <br />
+          react, next 프로젝트 설치시 기본적으로 내포되어 있어 따로 설치가
+          불필요 하다.
         </p>
         <p>
           Context의 실질적인 상태관리는{" "}
@@ -66,7 +82,7 @@ export default function Why() {
           </li>
         </ul>
         <p>
-          참고자료 :{" "}
+          DOCS :{" "}
           <a
             href="https://ko.legacy.reactjs.org/docs/context.html"
             target="_blank"
@@ -87,6 +103,15 @@ export default function Why() {
           리렌더링된다. Atom 상태 변경은 Selector라 불리는 순수 함수를 통해
           발생하며, 이는 비동기 처리 및 데이터 캐싱 기능을 제공하여 비동기
           데이터 처리를 용이하게 한다.
+        </p>
+        <p>
+          DOCS :{" "}
+          <a
+            href="https://recoiljs.org/ko/docs/introduction/getting-started"
+            target="_blank"
+          >
+            https://recoiljs.org/ko/docs/introduction/getting-started
+          </a>
         </p>
 
         <h3>Redux</h3>
@@ -116,6 +141,15 @@ export default function Why() {
             새로운 상태를 생성하는 함수이다.
           </li>
         </ul>
+        <p>
+          DOCS :{" "}
+          <a
+            href="https://ko.redux.js.org/introduction/getting-started/"
+            target="_blank"
+          >
+            https://ko.redux.js.org/introduction/getting-started/
+          </a>
+        </p>
 
         <h3>React Query</h3>
       </div>

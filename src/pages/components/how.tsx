@@ -2,7 +2,6 @@ import { useStore } from "@/store/useCombine";
 
 export default function How() {
   const { cart, login } = useStore();
-  console.log(cart, login);
 
   return (
     <div className="wrap">
@@ -40,6 +39,15 @@ export default function How() {
           참고 파일 : useButtonChange.tsx
         </p>
 
+        <p>
+          <a
+            href="https://docs.pmnd.rs/zustand/integrations/immer-middleware"
+            target="_blank"
+          >
+            https://docs.pmnd.rs/zustand/integrations/immer-middleware
+          </a>
+        </p>
+
         <h3>DevTools</h3>
         <p>
           개발 중에 <span className="underline">상태 변경을 추적</span>하고{" "}
@@ -64,13 +72,31 @@ export default function How() {
           <span className="underline">localStorage</span>를 사용하지만, 사용자가
           원하는 저장메커니즘으로 커스텀할 수 있다.
         </p>
+        <p>
+          <a
+            href="https://docs.pmnd.rs/zustand/integrations/persisting-store-data"
+            target="_blank"
+          >
+            https://docs.pmnd.rs/zustand/integrations/persisting-store-data
+          </a>
+        </p>
 
         <h3>Combine</h3>
         <p>
-          Zustand의 combine은 상태를 결합하고, 재사용하게 해주는 유틸리티
-          함수이다. 이를 통해 컴포넌트간에 일관적이고 협업하는 상태를 생성하고
-          관리할 수 있다. <br />
+          Zustand의 combine은 상태를 결합하게 해주는 유틸리티 함수이다. 이를
+          통해 컴포넌트간에 일관적이고 상태를 생성하고 관리할 수 있다. <br />
           참고 파일 : useCombine.tsx
+        </p>
+
+        <button onClick={() => console.log(cart, login)}>체크용</button>
+
+        <p>
+          혹은 : useBoundStore 을 사용 하여 두가지 상태 관리를 합치는 방법이
+          있다.
+          <br />
+          <a href="https://docs.pmnd.rs/zustand/guides/slices-pattern">
+            https://docs.pmnd.rs/zustand/guides/slices-pattern
+          </a>
         </p>
 
         <h3>Subscribe</h3>
@@ -78,6 +104,27 @@ export default function How() {
           상태 변경에 대한 반응으로 함수를 실행하기 위해 사용되는 메서드이다.
           <br />
           참고 파일 : useButtonChange.tsx
+        </p>
+
+        <h3>useShallow</h3>
+        <p>상태 선택자 내의 값이 변경될때만 반응하여 리랜더링 하는 훅이다.</p>
+        <p>
+          <a
+            href="https://docs.pmnd.rs/zustand/guides/prevent-rerenders-with-use-shallow"
+            target="_blank"
+          >
+            https://docs.pmnd.rs/zustand/guides/prevent-rerenders-with-use-shallow
+          </a>
+        </p>
+
+        <h3>타사 라이브러리</h3>
+        <p>
+          <a
+            href="https://docs.pmnd.rs/zustand/integrations/third-party-libraries"
+            target="_blank"
+          >
+            https://docs.pmnd.rs/zustand/integrations/third-party-libraries
+          </a>
         </p>
       </div>
     </div>

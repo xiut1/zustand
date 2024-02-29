@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { combine } from "zustand/middleware";
 
-type Item = any; // Define what an item is
+type Item = any;
 
 interface CartStore {
   items: Item[];

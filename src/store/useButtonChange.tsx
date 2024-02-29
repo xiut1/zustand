@@ -39,6 +39,6 @@ export const useColorChange = create(
 );
 
 // subscribe 함수를 사용 하여 useColorChange 의 colors 값이 변경 될 경우 log 를 출력
-useColorChange.subscribe((colors) => {
-  console.log(colors);
+useColorChange.subscribe((item) => {
+  console.log(item.colors);
 });
