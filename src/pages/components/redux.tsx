@@ -1,63 +1,46 @@
 import React from "react";
 import { createStore } from "redux";
-import { Provider, connect } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 
-// Action 의 타입을 문자열로 정의
-const CHANGE_THEME = "CHANGE_THEME";
-
-// type 이 CHANGE_THEME인 Action 객체를 생성하여 반환
-const changeTheme = () => ({
-  type: CHANGE_THEME,
+// 액션을 생성, 버튼 클릭시 호출된다.
+const swapTheme = () => ({
+  type: "THEME_SWAP",
 });
 
-// Reducer 함수 정의 > 수신된 Action을 가공하여 새로운 상태를 만듦
+// Reducer 함수로 상태 변화 로직을 처리 현재 상태 및 액션을 불러와 새로운 상태로 변환하는 작업을 한다.
 const themeReducer = (state = "white", action: { type: string }) => {
   switch (action.type) {
-    case CHANGE_THEME:
+    case "THEME_SWAP":
       return state === "black" ? "white" : "black";
     default:
       return state;
   }
 };
 
-// createStore 함수를 사용해 themeReducer를 기반으로 Redux store을 생성
+// store 라는 redux store 을 생성 한다.
 const store = createStore(themeReducer);
 
-// ThemeProvider 컴포넌트 정의
-const ThemeProvider = ({
-  theme,
-  handleClick,
-}: {
-  theme: string;
-  handleClick: () => void;
-}) => (
-  <button
-    onClick={handleClick}
-    style={{ backgroundColor: theme, width: "100px", height: "50px" }}
-  ></button>
-);
+// 컴포넌트 생성
+const ThemeButton = () => {
+  // useSelector는 현재 상태(테마 색)에 접근 한다.
+  const theme = useSelector((state: string) => state);
+  // useDispatch는 테마 변경 액션을 dispatch하기 위해 사용된다.
+  const dispatch = useDispatch();
 
-// ThemeProvider 컴포넌트의 상태를 Redux와 연결하기 위해 mapStateToProps 함수 정의
-const mapStateToProps = (state: string) => ({
-  theme: state,
-});
+  const handleClick = () => dispatch(swapTheme());
 
-// ThemeProvider 컴포넌트의 액션을 Redux와 연결하기 위해 mapDispatchToProps 함수 정의
-const mapDispatchToProps = (dispatch: (action: { type: string }) => void) => ({
-  handleClick: () => dispatch(changeTheme()),
-});
-
-// mapStateToProps와 mapDispatchToProps는 ThemeProvider 컴포넌트를 Redux store과 연결하는 데 사용됩니다.
-// mapStateToProps는 Redux store의 상태를 props로 매핑하고, mapDispatchToProps는 dispatch를 수행하는 함수를 props로 매핑합니다.
-const ConnectedThemeProvider = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(ThemeProvider);
+  return (
+    <button
+      onClick={handleClick}
+      style={{ backgroundColor: theme, width: "100px", height: "50px" }}
+    />
+  );
+};
 
 export default function Redux() {
   return (
     <Provider store={store}>
-      <ConnectedThemeProvider />
+      <ThemeButton />
     </Provider>
   );
 }
