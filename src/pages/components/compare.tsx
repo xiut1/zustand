@@ -28,6 +28,9 @@ export default function Compare() {
           style={{ backgroundColor: colors, width: "100px", height: "50px" }}
         />
       </div>
+      <div className="box">
+        <h2>느낀점</h2>
+      </div>
     </div>
   );
 }

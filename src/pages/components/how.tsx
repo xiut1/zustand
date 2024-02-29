@@ -18,7 +18,6 @@ export default function How() {
         <h2>Middleware 종류</h2>
 
         <h3>Immer</h3>
-
         <pre>
           <code>npm install immer</code>
         </pre>
@@ -36,8 +35,7 @@ export default function How() {
           >
             불변성
           </span>
-          을 유지하면서 마치 직접 객체를 변경하는 것처럼 코드를 작성할 수 있게
-          하는 것으로. 코드의 가독성을 향상시키고 버그를 방지하는데 도움됨.
+          데이터 구조 처리를 단순화할 수 있습니다.
           <br />
           참고 파일 : useButtonChange.tsx
         </p>
