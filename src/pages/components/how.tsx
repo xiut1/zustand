@@ -40,6 +40,13 @@ export default function How() {
         </p>
 
         <p>
+          불변성을 유지 해야 하는 이유 <br />
+          <a href="https://evan-moon.github.io/2020/01/05/what-is-immutable/">
+            https://evan-moon.github.io/2020/01/05/what-is-immutable/
+          </a>
+        </p>
+
+        <p>
           <a
             href="https://docs.pmnd.rs/zustand/integrations/immer-middleware"
             target="_blank"

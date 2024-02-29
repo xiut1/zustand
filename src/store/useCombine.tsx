@@ -1,11 +1,9 @@
 import { create } from "zustand";
 import { combine } from "zustand/middleware";
 
-type Item = any;
-
 interface CartStore {
-  items: Item[];
-  add: (item: Item) => void;
+  items: string[];
+  add: (item: string) => void;
 }
 
 export const useCartStore = create<CartStore>((set) => ({
@@ -34,7 +32,7 @@ export const useStore = create(
     (set) => ({
       cart: {
         ...useCartStore.getState(),
-        add: (item: Item) =>
+        add: (item: string) =>
           set((state) => ({
             ...state,
             cart: { ...state.cart, items: [...state.cart.items, item] },
